@@ -321,6 +321,7 @@ end
 
 function RemoveItemsAfterRPDeath()
 	TriggerServerEvent('esx_ambulancejob:setDeathStatus', false)
+--Fixed bug when you die from hunger or thirst, and it would reappear with hunger = 0 and thirst = 0.
 				TriggerEvent('esx_status:set', 'hunger', 500000)
 				TriggerEvent('esx_status:set', 'thirst', 500000)	
 
